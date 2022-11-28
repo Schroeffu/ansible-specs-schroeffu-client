@@ -1,10 +1,9 @@
 ---
-{% if runtype == 'firstboot' %}
-- name: b00t
-  src: git+https://github.com/Schroeffu/ansible-role-potos_firstboot-schroeffu.git
-  version: 'develop'
+{% if potos_runtype == 'firstboot' %}
+- name: firstboot
+  src: git+https://github.com/projectpotos/ansible-role-potos_firstboot
+  version: 'main'
 {% endif %}
-
 - name: basics
   src: git+https://github.com/projectpotos/ansible-role-potos_basics.git
   version: 'main'
